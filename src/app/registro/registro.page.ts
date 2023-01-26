@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, LoadingController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cliente } from '../models';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 import { FirestorageService } from '../services/firestorage.service';
 import { Subscription } from 'rxjs';
-import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+
 
 
 @Component({
@@ -32,7 +32,7 @@ export class RegistroPage implements OnInit {
 
   uid = '';
 
-  
+  ingresarEnable = false;
 
 
   constructor(
